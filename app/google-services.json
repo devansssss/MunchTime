@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "980751952766",
+    "project_id": "munchtime-31afc",
+    "storage_bucket": "munchtime-31afc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:980751952766:android:b33ce5b5650522f054212f",
+        "android_client_info": {
+          "package_name": "com.example.munchtime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "980751952766-ojeb05ii5kibcdou1offv2journd4k7q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.munchtime",
+            "certificate_hash": "c21bea02ac3b97ccd1faa4b809c0dab1e1602b6e"
+          }
+        },
+        {
+          "client_id": "980751952766-4vrd83mputluctook7dn4bpd87216e2e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB90EEsCivz_xJzQ7dE3wjzz-19vlE5WrM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "980751952766-4vrd83mputluctook7dn4bpd87216e2e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
