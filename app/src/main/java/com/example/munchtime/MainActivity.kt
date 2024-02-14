@@ -7,12 +7,11 @@ import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
 import androidx.activity.result.IntentSenderRequest
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import androidx.lifecycle.LifecycleCoroutineScope
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -20,7 +19,6 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.munchtime.auth.GoogleAuthClient
-import com.example.munchtime.models.signInState
 import com.example.munchtime.screens.ProfileScreen
 import com.example.munchtime.screens.SignInScreen
 import com.example.munchtime.ui.theme.MunchTimeTheme
@@ -39,6 +37,7 @@ class MainActivity : ComponentActivity() {
         )
     }
 
+    private var currentRoute by mutableStateOf("sign_in")
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,6 +45,9 @@ class MainActivity : ComponentActivity() {
 
         //splash screen
         installSplashScreen()
+
+
+
 
 
         setContent {
@@ -110,9 +112,18 @@ class MainActivity : ComponentActivity() {
                                     navController.popBackStack()
                                 }
                             })
-                        }
                     }
                 }
             }
         }
+
     }
+
+    override fun onBackPressed() {
+        if (currentRoute == "sign_in") {
+            finish()
+        } else {
+            super.onBackPressed()
+        }
+    }
+}
