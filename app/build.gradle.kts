@@ -57,21 +57,24 @@ dependencies {
     implementation("androidx.test:monitor:1.6.1")
     implementation("androidx.test.ext:junit-ktx:1.1.5")
     implementation("com.google.firebase:firebase-auth:22.3.0")
-    kapt ("com.google.dagger:hilt-compiler:2.50")
+    kapt("com.google.dagger:hilt-compiler:2.50")
 
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
 
     kapt("org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.5.0")
 
+    //Pager
+    implementation("com.google.accompanist:accompanist-pager:0.24.13-rc")
 
-    implementation ("androidx.core:core-splashscreen:1.0.1")
+
+    implementation("androidx.core:core-splashscreen:1.0.1")
 
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.2")
 
     implementation("com.google.accompanist:accompanist-flowlayout:0.17.0")
 
-    implementation ("com.google.android.gms:play-services-auth:20.7.0")
+    implementation("com.google.android.gms:play-services-auth:20.7.0")
 
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.0")

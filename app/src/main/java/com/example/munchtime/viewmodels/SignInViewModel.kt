@@ -16,13 +16,15 @@ class SignInViewModel @Inject constructor() : ViewModel() {
     private val _state = MutableStateFlow(signInState)
     val state = _state.asStateFlow()
 
+
     fun onSignInResult(result : SignInResult){
         _state.update { it.copy(
             isSignInSuccesful = result.data != null,
             signInError = result.errorMessage
         ) }
     }
-    
+
+
     fun resetState(){
         _state.update { signInState() }
     }
